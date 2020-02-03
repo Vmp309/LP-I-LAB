@@ -6,10 +6,11 @@ using namespace std;
 
 class Imovel : public Endereco
 {
-private:
+protected:
 	int tipoImovel; // 1--> Casa; 2--> Apartamento; 3--> Terrreno;
 	int tipoOferta; // 1--> Venda; 2--> Aluguel
 	string tituloAnuncio;
+	double preco;
 	Endereco endereco;
 	
 
@@ -18,27 +19,31 @@ public:
 	Imovel();
 	Imovel(int tipoImovel);
 
-	//FunÁıes para setar variaveis
+	//Fun√ß√µes para setar variaveis e uma para setar todos de uma s√≥ vez
 	void setTipoImovel(int tipo_imovel);
 
-	void setTipoOferta(int tipo_oferta);
+	void setTipoOferta(int tipo_DeOferta);
 
 	void setTituloAnuncio(string titulo_anuncio);
 
-	void setEndereco(Endereco ender);
+	void setPreco(double PRECO);
+
+	//void setEndereco(Endereco ender);
 
 
-	//FunÁıes get para recuperar informaÁıes dos objetos de forma individual e um para recuperar tudo de uma sÛ vez
+	//Fun√ß√µes get para recuperar informa√ß√µes dos objetos de forma individual e um para recuperar tudo de uma s√≥ vez
 	int getTipoImovel();
 
 	int getTipoOferta();
 
 	string getTituloAnuncio();
 
+	double getPreco();
+
 	Endereco getEndereco();
 
 	void toStringImovel(); 
-/* Sobre cadastroImovel: Setar as vari·veis do ImÛvel, cuidado,pois ainda È necess·rio setar as vari·veis especÌficas de cada tipo de imÛvel*/
+/* Sobre cadastroImovel: Setar as vari√°veis do Im√≥vel, cuidado,pois ainda √© necess√°rio setar as vari√°veis espec√≠ficas de cada tipo de im√≥vel*/
 
 
 };
