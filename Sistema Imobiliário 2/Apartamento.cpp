@@ -1,12 +1,22 @@
 #include "Apartamento.h"
 
 //Construtor(es)
-Apartamento::Apartamento() {};
+Apartamento::Apartamento() {
+	setTipoImovel(2); // Ver Imovel.h para ver especificaÃ§Ãµes do parÃ¢metro
+};
 
 
-//Funções set
+//FunÃ§Ãµes set
+void Apartamento::setApartamento() {
+	cout << "Digite o numero de quartos: "; cin >> numeroQuartos;
+	cout << "Digite o numero de vagas na garagem: "; cin >> numeroVagas;
+	cout << "Digite a area do apartamento: "; cin >> area;
+	cout << "Digite o valor do condominio: "; cin >> valorCondominio;
+	cout << "Digite a posicao do apartamento com relacao ao sol: " << endl; cin >> posicao;
+}
+
 void Apartamento::setnumQuartos(int num_quartos) {
-	numeroQuartos - num_quartos;
+	numeroQuartos = num_quartos;
 }
 
 void Apartamento::setnumVagas(int num_vagas) {
@@ -26,7 +36,7 @@ void Apartamento::setPosicao(string pos) {
 }
 
 
-// Funções get
+// FunÃ§Ãµes get
 int Apartamento::getnumQuartos() {
 	return numeroQuartos;
 }
@@ -48,9 +58,18 @@ string Apartamento::getPosicao() {
 }
 
 void Apartamento::toStringApartamento() {
+	toStringImovel();
 	cout << "Numero de quartos: " << numeroQuartos << endl;
 	cout << "Numero de vagas na garagem: " << numeroVagas << endl;
 	cout << "Area: " << area << endl;
 	cout << "Valor do Condominio: " << valorCondominio << endl;
 	cout << "Posicao em relacao ao sol: " << posicao << endl;
+	toStringEndereco();
+}
+
+
+ofstream& operator<<(ofstream& output, const Apartamento& apt) {
+	output << apt;
+
+	return output;
 }
