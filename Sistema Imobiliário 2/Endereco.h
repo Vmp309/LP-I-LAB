@@ -1,4 +1,5 @@
 #pragma once
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -12,7 +13,7 @@ private:
 	string rua;
 	string bairro;
 	string cep;
-	string cidade;
+	string Cidade;
 
 public:
 	// Construtores
@@ -21,6 +22,8 @@ public:
 
 
 	//Funções para setar individualmente cada atributo
+	void setEndereco();// A função setEndereco seta todos os atributos de endereço de uma vez só
+
 	void setNumero(int num);
 
 	void setRua(string street);
@@ -43,5 +46,8 @@ public:
 
 	string getCidade();
 
+	//void getEndereco2();
+
 	void toStringEndereco();
 };
+
