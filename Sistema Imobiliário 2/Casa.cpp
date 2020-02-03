@@ -1,9 +1,18 @@
 #include "Casa.h"
 
 //Construtores
-Casa::Casa() {};
+Casa::Casa() {
+	setTipoImovel(1); // Ver Imovel.h para ver especificações do parâmetro
+};
 
-//Fun��es set
+//Funções set de forma individual e um que seta todos os atributos de uma só vez
+void Casa::setCasa() {
+	cout << "Digite o numero de pavimentos: "; cin >> numeroPavimentos;
+	cout << "Digite o numero de quartos: "; cin >> numeroQuartos;
+	cout << "Digite a area do terreno: "; cin >> areaTerreno;
+	cout << "Digite a area construida: "; cin >> areaConstruida;
+}
+
 void Casa::setnumPav(int num_pav) {
 	numeroPavimentos = num_pav;
 }
@@ -21,7 +30,7 @@ void Casa::setAreaContruida(double area_construida) {
 }
 
 
-//Fun��es get
+//Funções get
 int Casa::getnumPav() {
 	return numeroPavimentos;
 }
@@ -30,13 +39,32 @@ int Casa::getnumQuartos() {
 	return numeroQuartos;
 }
 
+double Casa::getAreaTerreno() {
+	return areaTerreno;
+}
+
 double Casa::getAreaConstruida() {
 	return areaConstruida;
 }
 
 void Casa::toStringCasa() {
+	toStringImovel();
 	cout << "Numero de pavimentos: " << numeroPavimentos << endl;
 	cout << "Numero de quartos: " << numeroQuartos << endl;
 	cout << "Area do terreno: " << areaTerreno << endl;
 	cout << "Area construida: " << areaConstruida << endl;
+	toStringEndereco();
+}
+
+
+ofstream &operator<<(ofstream&output, const Casa &cs) {
+	output << cs;
+
+	return output;
+}
+
+ifstream& operator>>(ifstream& input, const Casa &cs) {
+	input >> cs;
+
+	return input;
 }
