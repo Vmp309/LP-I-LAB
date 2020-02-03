@@ -2,6 +2,13 @@
 #include "Imovel.h"
 class Apartamento : public Imovel
 {
+
+	//Sobrecarga de operador <<
+	friend ofstream& operator<<(std::ofstream&, const Apartamento& apt);
+
+	//Sobrecarga de operador >>
+	friend istream& operator>>(istream& is, const Apartamento& apt);
+
 private:
 	int numeroQuartos;
 	int numeroVagas;
@@ -13,7 +20,9 @@ public:
 	Apartamento();
 
 
-	//Funções set para cada atributo
+	//FunÃ§Ãµes set para cada atributo e um para todos os atributos de Apartamento APENAS
+	void setApartamento();
+
 	void setnumQuartos(int num_quartos);
 
 	void setnumVagas(int num_vagas);
@@ -25,7 +34,7 @@ public:
 	void setPosicao(string pos);
 
 
-	//Funções get para cada atributo
+	//FunÃ§Ãµes get para cada atributo
 	int getnumQuartos();
 
 	int getnumVagas();
@@ -38,4 +47,3 @@ public:
 
 	void toStringApartamento();
 };
-
