@@ -6,11 +6,19 @@ Endereco::Endereco(int num, string street, string bairr, string CEP, string city
 	numero = num;
 	rua = street;
 	bairro = bairr;
-	CEP = cep;
-	cidade = city;	
+	cep = CEP;
+	Cidade = city;	
 }
 
-// Funções set
+// FunÃ§Ãµes set
+void Endereco::setEndereco() {
+	cout << "Digite o nome da rua: " << endl; cin >> rua;
+	cout << "Digite o numero do imovel: " << endl; cin >> numero;
+	cout << "Digite o nome do bairro: " << endl; cin >> bairro;
+	cout << "Digite o CEP do local: " << endl;  cin >> cep;
+	cout << "Digite o nome da cidade: " << endl; cin >> Cidade;
+}
+
 void Endereco::setNumero(int num) {
 	numero = num;
 }
@@ -28,11 +36,11 @@ void Endereco::setCep(string CEP) {
 }
 
 void Endereco::setCidade(string city) {
-	cidade = city;
+	Cidade = city;
 }
 
 
-//Funções get
+//FunÃ§Ãµes get
 int Endereco::getNumero() {
 	return numero;
 }
@@ -50,9 +58,13 @@ string Endereco::getCep() {
 }
 
 string Endereco::getCidade() {
-	return cidade;
+	return Cidade;
 }
 
+/*void Endereco::getEndereco2() {
+	cout << rua << "\n" << numero << "\n" << bairro << "\n" << cep << "\n" << cidade << endl;
+}*/
+
 void Endereco::toStringEndereco() {
-	cout << "Endereco: " << rua << ", " << numero << ", " << bairro << "; " << cep << "; " << cidade << endl;
+	cout << "Endereco: " << rua << ", " << numero << ", " << bairro << "; " << cep << "; " << Cidade << endl;
 }
