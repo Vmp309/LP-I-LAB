@@ -1,0 +1,11 @@
+﻿  Apartamento.cpp
+  Casa.cpp
+  Imovel.cpp
+  Terreno.cpp
+  main.cpp
+c:\users\aluno\desktop\sistemaimo\projectsistemaimo\projectsistemaimo\main.cpp(248): warning C4101: 'testd': variável local não referenciada
+  Gerando Código...
+c:\users\aluno\desktop\sistemaimo\projectsistemaimo\projectsistemaimo\terreno.cpp(54): warning C4717: 'operator<<': recursivo em todos os caminhos de controle, função causará estouro na pilha em tempo de execução
+c:\users\aluno\desktop\sistemaimo\projectsistemaimo\projectsistemaimo\casa.cpp(80): warning C4717: 'operator>>': recursivo em todos os caminhos de controle, função causará estouro na pilha em tempo de execução
+c:\users\aluno\desktop\sistemaimo\projectsistemaimo\projectsistemaimo\apartamento.cpp(86): warning C4717: 'operator<<': recursivo em todos os caminhos de controle, função causará estouro na pilha em tempo de execução
+  ProjectSistemaImo.vcxproj -> C:\Users\aluno\Desktop\SistemaImo\ProjectSistemaImo\Debug\ProjectSistemaImo.exe
