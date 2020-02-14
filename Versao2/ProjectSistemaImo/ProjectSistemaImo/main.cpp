@@ -10,9 +10,9 @@
 #define TAM_G 100;
 #define TAM_M 50;
 
-///Funçõs relacionadas ao cadastro, edição e listagem de imóveis
+///FunÃ§Ãµs relacionadas ao cadastro, ediÃ§Ã£o e listagem de imÃ³veis
 
-//Função de cadastro de imóveis
+//FunÃ§Ã£o de cadastro de imÃ³veis
 
 
 int main() {
@@ -22,7 +22,7 @@ int main() {
 
 	//Verificando se o arquivo foi aberto
 	if (!arquivo.is_open()) {
-		cout << "OPS! Houve um problema e o programa não pode ser aberto\n";
+		cout << "OPS! Houve um problema e o programa nÃ£o pode ser aberto\n";
 		arquivo.close();
 		return 0;
 	}
@@ -243,37 +243,80 @@ int main() {
 	}
 
 		///Listagem de Imoveis
-		else if (opcao1 == 2) {
-			int tdi;
-			double testd;
-			string str_tdi;
-			getline(arquivo, str_tdi);
-			istringstream(str_tdi) >> tdi;
-			/*char *pointer; 
-			string teste = "3";
-			string testest = "3.5";
-			istringstream(teste) >> tdi;// Para transformar de string para inteiro
+	 if (opcao1 == 2) {
+		string tdi_str, str_tituloAnuncio, str_numero_pav, str_num_quartos, str_areaDo_terreno, str_area_construida, str_tipo_oferta,
+		str_preco, str_rua, str_numeroDaCasa, str_bairro, str_cep, str_cidade;
+
+		int tdi, int_num_pav, int_num_quartos, int_tipo_oferta, int_numeroDaCasa;			
+		
+		tdi = int_num_pav = int_num_quartos = int_tipo_oferta = int_numeroDaCasa = 0;
+
+
+		double doub_area_terreno, doub_area_construida, doub_preco;
+		char *pointer;
+
+
+		while (!arquivo.eof()) {
+
+			getline(arquivo, tdi_str);
+			istringstream(tdi_str) >> tdi;
+			
 			cout << tdi << endl;
-			testd = strtod(testest.c_str(), &pointer); Para transformar de string pra double
-			cout << testd << endl;
-
-			system("pause");*/
-
 			if (tdi == 1) {
-				Casa ca = Casa();
-				string str, num_pav;
 				
-				// Lendo a string título do arquivo na ordem do arquivo
-				getline(arquivo, str);
-				ca.setTituloAnuncio(str);
-				
-				getline(arquivo, num_pav);
-				//istream//
+				Casa cs = Casa();
+				getline(arquivo, str_tituloAnuncio);
+				cs.setTituloAnuncio(str_tituloAnuncio);
+
+				getline(arquivo, str_numero_pav);
+				istringstream(str_numero_pav) >> int_num_pav;
+				cs.setnumPav(int_num_pav);
+
+				getline(arquivo, str_num_quartos);
+				istringstream(str_num_quartos) >> int_num_quartos;
+				cs.setnumQuartos(int_num_quartos);
+
+				getline(arquivo, str_areaDo_terreno);
+				doub_area_terreno = strtod(str_areaDo_terreno.c_str(), &pointer);
+				cs.setAreaTerreno(doub_area_terreno);
+				//delete pointer;
+
+				getline(arquivo, str_area_construida);
+				doub_area_construida = strtod(str_area_construida.c_str(), &pointer);
+				cs.setAreaTerreno(doub_area_construida);
+
+				getline(arquivo, str_tipo_oferta);
+				istringstream(str_tipo_oferta) >> int_tipo_oferta;
+				cs.setTipoOferta(int_tipo_oferta);
+
+				getline(arquivo, str_preco);
+				doub_preco = strtod(str_preco.c_str(), &pointer);
+				cs.setPreco(doub_preco);
+
+				getline(arquivo, str_rua);
+				cs.setRua(str_rua);
+
+				getline(arquivo, str_numeroDaCasa);
+				istringstream(str_numeroDaCasa) >> int_numeroDaCasa;
+				cs.setNumero(int_numeroDaCasa);
+
+				getline(arquivo, str_bairro);
+				cs.setBairro(str_bairro);
+
+				getline(arquivo, str_cep);
+				cs.setCep(str_cep);
+
+				getline(arquivo, str_cidade);
+				cs.setCep(str_cidade);
+
+				cs.toStringCasa();
+
 			}
 		}
-
+	 }
 
 	arquivo.close();
+
 
 	return 0;
 }
