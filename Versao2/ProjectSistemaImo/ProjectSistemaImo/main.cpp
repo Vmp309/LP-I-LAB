@@ -308,7 +308,7 @@ int main() {
 				cs.setCep(str_cep);
 
 				getline(arquivo, str_cidade);
-				cs.setCep(str_cidade);
+				cs.setCidade(str_cidade);
 
 				cs.toStringCasa();
 
