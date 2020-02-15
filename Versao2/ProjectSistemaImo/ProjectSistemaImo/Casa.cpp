@@ -3,10 +3,10 @@
 
 //Construtores
 Casa::Casa() {
-	setTipoImovel(1); // Ver Imovel.h para ver especificações do parâmetro
+	setTipoImovel(1); // Ver Imovel.h para ver especificaÃ§Ãµes do parÃ¢metro
 };
 
-//Funções set de forma individual e um que seta todos os atributos de uma só vez
+//FunÃ§Ãµes set de forma individual e um que seta todos os atributos de uma sÃ³ vez
 void Casa::setCasa() {
 	cout << "Digite o numero de pavimentos: "; cin >> numeroPavimentos;
 	cout << "Digite o numero de quartos: "; cin >> numeroQuartos;
@@ -26,12 +26,12 @@ void Casa::setAreaTerreno(double area_terreno) {
 	areaTerreno = area_terreno;
 }
 
-void Casa::setAreaContruida(double area_construida) {
+void Casa::setAreaConstruida(double area_construida) {
 	areaConstruida = area_construida;
 }
 
 
-//Funções get
+//FunÃ§Ãµes get
 int Casa::getnumPav() {
 	return numeroPavimentos;
 }
