@@ -55,6 +55,7 @@ void Casa::toStringCasa() {
 	cout << "Area do terreno: " << areaTerreno << endl;
 	cout << "Area construida: " << areaConstruida << endl;
 	toStringEndereco();
+	cout << endl;
 }
 
 string Casa::ToSTRING1(){
