@@ -284,7 +284,7 @@ int main() {
 
 				getline(arquivo, str_area_construida);
 				doub_area_construida = strtod(str_area_construida.c_str(), &pointer);
-				cs.setAreaTerreno(doub_area_construida);
+				cs.setAreaConstruida(doub_area_construida);
 
 				getline(arquivo, str_tipo_oferta);
 				istringstream(str_tipo_oferta) >> int_tipo_oferta;
