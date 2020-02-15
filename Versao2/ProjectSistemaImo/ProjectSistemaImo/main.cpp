@@ -254,7 +254,8 @@ int main() {
 
 		double doub_area_terreno, doub_area_construida, doub_preco;
 		char *pointer;
-
+		
+		 std::ifstream arquivo("listaDeImoveis.txt", ios::in);
 
 		while (!arquivo.eof()) {
 
