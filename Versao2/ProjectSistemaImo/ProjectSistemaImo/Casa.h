@@ -18,8 +18,8 @@ public:
 	//Construtores
 	Casa();
 
-	//Funções set para atributos de forma individual
-	void setCasa(); // A função setCasa seta APENAS os atributos de Casa de uma só vez
+	//FunÃ§Ãµes set para atributos de forma individual
+	void setCasa(); // A funÃ§Ã£o setCasa seta APENAS os atributos de Casa de uma sÃ³ vez
 
 	void setnumPav(int num_pav);
 
@@ -27,11 +27,11 @@ public:
 
 	void setAreaTerreno(double area_terreno);
 
-	void setAreaContruida(double area_construida);
+	void setAreaConstruida(double area_construida);
 
 
 
-	//Funções get para recuperar informações de forma individual e um para recuperar tudo
+	//FunÃ§Ãµes get para recuperar informaÃ§Ãµes de forma individual e um para recuperar tudo
 	int getnumPav();
 
 	int getnumQuartos();
