@@ -1,0 +1,3 @@
+O polimorfismo é um conceito que configura a associação entre classe diferentes mas que herdam da mesma classe pai. Dessa forma,
+quando o conceito é utilizado, utiliza-se o tipo da classe pai para manusear objetos de classes diferentes, normalmente ao mesmo tempo,
+para aumentar a eficiência do código. Segue o exemplo nos arquivos que estão nesta mesma pasta.
