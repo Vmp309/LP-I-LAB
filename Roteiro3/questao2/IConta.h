@@ -1,18 +1,7 @@
-#ifndef ICONTA_H
-#define ICONTA_H
-
-
+#pragma once
 class IConta
 {
-    public:
-        IConta();
-        virtual ~IConta();
-
-    protected:
-        virtual void sacar(double valor);
-        virtual void depositar (double valor);
-
-    private:
+public:
+	virtual void sacar(double valor) =0;
+	virtual void depositar(double valor) =0;
 };
-
-#endif // ICONTA_H
