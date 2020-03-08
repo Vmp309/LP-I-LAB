@@ -1,4 +1,4 @@
-#include "IConta.h"
+/*#include "IConta.h"
 
 IConta::IConta()
 {
@@ -8,4 +8,4 @@ IConta::IConta()
 IConta::~IConta()
 {
     //dtor
-}
+}*/
