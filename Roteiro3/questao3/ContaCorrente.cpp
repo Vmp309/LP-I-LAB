@@ -3,9 +3,8 @@
 ContaCorrente::ContaCorrente(){}
 
 ContaCorrente::ContaCorrente(std::string nomeCliente, int numero, double saldo, double salario, int limite){
-    this->nomeCliente = nomeCliente;
-    this->numero = numero;
-    this->saldo = saldo;
+
+    Conta(nomeCliente, numero, saldo);
     this->salario = salario;
     this->limite = limite;
 }
@@ -29,7 +28,8 @@ double ContaCorrente::getLimite(){
     return this->limite;
 }
 
-
+// Funcao extra:
 double ContaCorrente::definirLimite(){
-    
+    this->limite = salario * 2;
+    return this->limite;
 }
