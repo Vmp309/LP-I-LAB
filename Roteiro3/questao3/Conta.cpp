@@ -48,4 +48,5 @@ void Conta::sacar(double valor){
 
 void Conta::depositar(double valor){
     this->saldo += valor;
+    std::cout << "Deposito efetuado com sucesso" << std::endl;
 }
