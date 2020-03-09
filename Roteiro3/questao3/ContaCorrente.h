@@ -3,7 +3,7 @@
 
 class ContaCorrente : public Conta
 {
-    private:
+    protected:
         double salario;
         int limite;
 
