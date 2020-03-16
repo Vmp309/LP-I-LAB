@@ -64,24 +64,3 @@ double Conta::getLimite() {
 void Conta::definirLimite() {
 	this->limite = 2 * this->salarioMensal;
 }
-
-//Funcao saque e deposito
- void Conta::sacar(double valor) {
-	 if (this->saldo >= valor) {
-		 this->saldo -= valor;
-		 std::cout << "Saque efetuado com sucesso" << std::endl;
-	 }
-	 else {
-		 std::cout << "Saldo insuficiente" << std::endl;
-
-	 }
-}
-
-void Conta::depositar(double valor) {
-	if (valor <= this->limite){
-		this->saldo += valor;
-		std::cout << "Deposito efetuado com sucesso" << std::endl;
-	}else{
-		std::cout << "Limite de deposito excedido" << std::endl;
-	}
-}
