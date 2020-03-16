@@ -43,10 +43,25 @@ public:
 	
 	double getLimite();
 
-	//funcoes extras
-	void sacar(double valor);
+	//Metodos abstrados da classe IConta
+	void sacar(double valor){
+		if (this->saldo >= valor) {
+			this->saldo -= valor;
+			 std::cout << "Saque efetuado com sucesso" << std::endl;
+	 	}
+	 	else {
+		 std::cout << "Saldo insuficiente" << std::endl;
+	 	}
+	};
 
-	void depositar(double valor);
+	void depositar(double valor){
+		if (valor <= this->limite){
+			this->saldo += valor;
+			std::cout << "Deposito efetuado com sucesso" << std::endl;
+		}else{
+			std::cout << "Limite de deposito excedido" << std::endl;
+		}
+	};
 	
 	virtual void definirLimite();
 };
