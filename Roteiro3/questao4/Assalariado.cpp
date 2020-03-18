@@ -1,6 +1,7 @@
 #include "Assalariado.h"
 
 Assalariado::Assalariado(){}
+Assalariado::~Assalariado(){}
 
 //Metodo set
 void Assalariado::setSalario(double salario){
