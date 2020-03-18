@@ -1,0 +1,5 @@
+Houve um problema no upload dos files e um deles Comissionado.cpp não havia sido lançado no git, então foi feito o upload depois do prazo
+quando percebi isso de forma acidental. Outra alteração feita em outros arquivos cpp foi a inclusão do destrutor nos arquivos .cpp de 
+Horista, Comissionado, Funcionario e Assalariado. Tanto que o git aponta a mudança apenas nestes arquivos, portanto, houveram alterações
+depois do prazo mas que constituem erros na hora de fazer o upload. Este aviso é um esclarecimento para a melhor avaliação da atividade, 
+corrija-a como for necessário. Obrigda pela atenção.
