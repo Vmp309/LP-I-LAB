@@ -2,6 +2,7 @@
 
 //Construtores
 Funcionario::Funcionario(){};
+Funcionario::~Funcionario(){};
 
 Funcionario::Funcionario(std::string nome, int matricula){
     this->nome = nome;
