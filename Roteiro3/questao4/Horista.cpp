@@ -2,6 +2,7 @@
 
 //Construtor
 Horista::Horista(){}
+Horista::~Horista(){}
 
 //Metodos set
 void Horista::setSalarioHora(double salarioHora){
